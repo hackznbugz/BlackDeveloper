@@ -1,0 +1,647 @@
+<!-- 
+    Author: Black
+    Topic: My Blog | UI Design
+    Date: May 1st 2020
+      
+      -  Icons designed in Affinity designer
+      -  Illustration from undraw.co
+    
+    Thank you all ! I never thought my second code could cross 100+ likes
+ -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Blog | UI Design</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"/>
+    <style>
+    * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  scroll-behavior: smooth;
+}
+
+body, html {
+  overflow: hidden;
+  font-size: clamp(16px, 2.5vw, 20px);
+}
+
+.heading {
+  font-size: 1.35rem;
+  font-weight: bold;
+}
+
+main {
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  min-height: 100vh;
+  height: calc(100vh - 3.5rem);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body {
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  background-color: #1D1F21;
+}
+
+nav {
+  height: 4.375rem;
+  background-color: #161819;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1.25rem;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul .user-icon {
+  margin-left: auto;
+}
+
+nav ul li.heading {
+  margin-left: 1.25rem;
+}
+
+.ic {
+  height: 2.5rem;
+  width: 2.5rem;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ic:active {
+  background-color: #282B2E;
+}
+
+.fc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bottom-nav {
+  height: 3.5rem;
+  background-color: #FFBF00;
+  border-radius: 1rem 1rem 0 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+}
+
+.bottom-nav nav {
+  height: inherit;
+  background-color: transparent;
+}
+
+.bottom-nav ul {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.bottom-nav ul li:not(:nth-child(2)):active {
+  background-color: #EBB000;
+}
+
+.profile {
+  height: 5.625rem;
+  margin: 1.25rem auto 1.875rem auto;
+  background-color: #FFBF00;
+  border-radius: 5.625rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: .625rem;
+  max-width: 25rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.profile__content {
+  margin-left: 1.25rem;
+  color: #1D1F21;
+}
+
+.profile__text {
+  margin-top: 5px;
+}
+
+.sections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 200ms ease-in-out;
+  transition: -webkit-transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out;
+  transition: transform 200ms ease-in-out, -webkit-transform 200ms ease-in-out;
+}
+
+.sections section {
+  width: 100vw;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100vw;
+          flex: 0 0 100vw;
+  padding: 0 1.25rem;
+}
+
+.sections section .illustration img {
+  width: 70%;
+  max-width: 25rem;
+}
+
+.sections section p {
+  line-height: 1.5;
+}
+
+.m20 {
+  margin: 1.25rem 0;
+}
+
+.skills {
+  margin-top: 1.875rem;
+  margin-bottom: 4.75rem;
+}
+
+.skills div span {
+  font-size: .875rem;
+}
+
+.skills div div {
+  height: .625rem;
+  background-color: #161819;
+  margin-top: .625rem;
+  border-radius: .625rem;
+  width: 80%;
+}
+
+.skills div div span {
+  background-color: #FFBF00;
+  height: inherit;
+  width: 80%;
+  display: block;
+  border-radius: inherit;
+}
+
+.skills .css span {
+  width: 70%;
+}
+
+.skills .js span {
+  width: 60%;
+}
+
+.skills .c span {
+  width: 50%;
+}
+
+.codes {
+  margin: 1.25rem .625rem;
+}
+
+.nav-container {
+  height: 100vh;
+  width: 75%;
+  position: fixed;
+  background-color: #333;
+  z-index: 4;
+  border-radius: 0 1rem 1rem 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+}
+
+.nav-container .heading {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.nav-container .icon-left {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.nav-container .bottom {
+  position: absolute;
+  bottom: 10px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+.nav-container p {
+  margin-top: 10px;
+}
+
+.nav-container.navOpen {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+main.navOpen {
+  -webkit-transform: translateX(75%);
+          transform: translateX(75%);
+}
+
+.code-section {
+  height: 4rem;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  background-color: #FFBF00;
+  border-radius: 3.5rem;
+  color: #1D1F21;
+  margin: 20px auto;
+}
+
+.code-section__type {
+  height: 100%;
+  background-color: #EBB000;
+  border-radius: 3rem;
+}
+
+.code-section__type img {
+  width: 3rem;
+}
+
+.code-section__heading {
+  margin-left: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tools {
+  margin: 1.875rem 0;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  row-gap: 1.875rem;
+  -webkit-box-pack: space;
+      -ms-flex-pack: space;
+          justify-content: space;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.25rem;
+}
+
+.grid img {
+  width: 50%;
+  max-width: 150px;
+  max-height:200px;
+}
+
+.grid .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer {
+  background-color: #161819;
+  padding: 20px;
+  border-radius: 50px;
+  max-width: 25rem;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.loader, .overlay {
+  -webkit-transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out;
+}
+
+.loader {
+  height: 100vh;
+  width: 100%;
+  background-color: #1D1F21;
+  z-index: 100;
+  position: fixed;
+  pointer-events: none;
+}
+
+.overlay {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.35);
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="loader fc">
+      <div>
+        <svg x="0px" y="0px" width="24px" height="30px">
+          <rect x="0" y="13" width="4" height="5" fill="#FFBF00">
+            <animate
+              attributeName="height"
+              values="5;21;5"
+              begin="0s"
+              dur="0.6s"
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="y"
+              values="13; 5; 13"
+              begin="0s"
+              dur="0.6s"
+              repeatCount="indefinite"
+            />
+          </rect>
+          <rect x="10" y="13" width="4" height="5" fill="#FFBF00">
+            <animate
+              attributeName="height"
+              values="5;21;5"
+              begin="0.15s"
+              dur="0.6s"
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="y"
+              values="13; 5; 13"
+              begin="0.15s"
+              dur="0.6s"
+              repeatCount="indefinite"
+            />
+          </rect>
+          <rect x="20" y="13" width="4" height="5" fill="#FFBF00">
+            <animate
+              attributeName="height"
+              values="5;21;5"
+              begin="0.3s"
+              dur="0.6s"
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="y"
+              attributeType="XML"
+              values="13; 5; 13"
+              begin="0.3s"
+              dur="0.6s"
+              repeatCount="indefinite"
+            />
+          </rect>
+        </svg>
+      </div>
+    </div>
+    <div class="nav-container fc">
+      <div class="ic fc icon-left" onclick="closeNav()">
+        <img
+          src="https://vikram-hegde.github.io/todo-app/images/Icon weather-direction-left.svg"
+        />
+      </div>
+      <div class="profile__img fc">
+        <img
+          src="https://vikram-hegde.github.io/todo-app/images/Group 12.svg"
+        />
+        <div class="heading">Black</div>
+        <p>Love Web & UI Designs</p>
+        <div class="bottom">
+          ⚡️ Crafted by Black ⚡️
+        </div>
+      </div>
+    </div>
+    <div class="overlay" onclick="closeNav()"></div>
+    <main>
+      <nav id="nav">
+        <ul>
+          <li class="ham-menu ic fc" onclick="openNav()">
+            <img
+              src="https://vikram-hegde.github.io/todo-app/images/Group 1.svg"
+            />
+          </li>
+          <li class="heading">Blog</li>
+          <li class="user-icon ic fc">
+            <a href="https://www.sololearn.com/Profile/18307346" target="_blank"
+              ><img
+                src="https://vikram-hegde.github.io/todo-app/images/Icon feather-user.svg"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+      <div class="sections">
+        <section class="home">
+          <div class="profile fc">
+            <div class="profile__img">
+              <img
+                src="https://vikram-hegde.github.io/todo-app/images/Group 12.svg"
+              />
+            </div>
+            <div class="profile__content">
+              <div class="profile__name heading">Black</div>
+              <div class="profile__text">Aspiring Web Developer</div>
+            </div>
+          </div>
+
+          <div class="about">
+            <div class="heading">
+              About
+              <div class="illustration fc m20">
+                <img
+                  src="https://vikram-hegde.github.io/todo-app/images/undraw_code_review_l1q9.svg"
+                />
+              </div>
+            </div>
+            <p>
+              I am Black a coding enthusiast 🤓. I like to code in HTML, CSS and
+              JS. I started my Web development journey last year (2019
+              September) and been learning about it, even now and forever 😄
+              <br />
+              I also love UI / UX design which I've been learning recently.
+            </p>
+          </div>
+          <div class="tools">
+            <div class="heading">Tools I Use</div>
+            <div class="grid">
+              <div class="icon-vs icon">
+                <img
+                  src="https://vikram-hegde.github.io/todo-app/images/visual-studio-code-1.svg"
+                />
+              </div>
+              <div class="icon-firefox icon">
+                <img
+                  src="https://vikram-hegde.github.io/todo-app/images/firefox.svg"
+                />
+              </div>
+              <div class="icon-affinity icon">
+                <img
+                  src="https://vikram-hegde.github.io/todo-app/images/affinity.svg"
+                />
+              </div>
+              <div class="icon-xd icon">
+                <img
+                  src="https://vikram-hegde.github.io/todo-app/images/adobe-xd-1.svg"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="skills">
+            <div class="heading">Skills</div>
+            <div class="html m20">
+              <span>HTML</span>
+              <div><span></span></div>
+            </div>
+            <div class="css m20">
+              <span>CSS</span>
+              <div><span></span></div>
+            </div>
+            <div class="js m20">
+              <span>JS</span>
+              <div><span></span></div>
+            </div>
+            <div class="c m20">
+              <span>C++</span>
+              <div><span></span></div>
+            </div>
+          </div>
+        </section>
+        <section class="codes">
+          <div class="heading">Codes</div>
+          <a href="https://code.sololearn.com/WzD5na0Ettpa/" target="_blank">
+            <div class="code-section m20">
+              <div class="code-section__type fc">
+                <img
+                  src="https://vikram-hegde.github.io/todo-app/images/Group 12.svg"
+                />
+              </div>
+              <div class="code-section__heading">Hello SoloLearner's</div>
+            </div>
+          </a>
+          <a href="#">
+            <div class="code-section m20">
+              <div class="code-section__type fc">
+                <img
+                  src="https://vikram-hegde.github.io/todo-app/images/Group 12.svg"
+                />
+              </div>
+              <div class="code-section__heading">My Blog | UI Design</div>
+            </div>
+          </a>
+
+          <div class="footer fc">
+            <p>
+              If you liked this code give it a 👍 ! and put down your feedbacks
+              in the comments
+            </p>
+          </div>
+        </section>
+      </div>
+      <div class="bottom-nav">
+        <nav>
+          <ul>
+            <li class="home-icon ic fc" onclick="openPage(0)">
+              <a href="#nav"
+                ><img
+                  src="https://vikram-hegde.github.io/todo-app/images/Group 3.svg"
+              /></a>
+            </li>
+            <li class="fc">
+              <img
+                src="https://vikram-hegde.github.io/todo-app/images/Union 2.svg"
+              />
+            </li>
+            <li class="code ic fc" onclick="openPage(1)">
+              <a href="#nav" class="fc"
+                ><img
+                  src="https://vikram-hegde.github.io/todo-app/images/Icon ionic-ios-code.svg"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </main>
+  <script>
+  function $(tag) {
+  return document.querySelector(tag);
+}
+
+function openPage(i) {
+  $('.sections').style.transform = `translateX(-${i * 100}vw)`;
+}
+
+function openNav() {
+  $('main').classList.add('navOpen');
+  $('.nav-container').classList.add('navOpen');
+  $('.overlay').style.opacity = 1;
+  $('.overlay').style.pointerEvents = 'auto';
+}
+
+function closeNav() {
+  $('main').classList.remove('navOpen');
+  $('.nav-container').classList.remove('navOpen');
+  $('.overlay').style.opacity = 0;
+  $('.overlay').style.pointerEvents = 'none';
+}
+
+onload = function() {
+  $('.loader').style.opacity = 0;
+};
+  </script>
+  </body>
+</html>
